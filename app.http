@@ -1,0 +1,56 @@
+GET http://localhost:3006/todos/
+### 
+
+//API 1 
+GET http://localhost:3006/todos/?status=TO%20DO
+###
+
+GET http://localhost:3006/todos/?priority=HIGH 
+### 
+
+GET http://localhost:3006/todos/?priority=HIGH&status=IN%20PROGRESS
+### 
+
+GET http://localhost:3006/todos/?search_q=Play
+###
+
+//API 2 
+GET http://localhost:3006/todos/5/ 
+###
+
+//API 3 
+POST http://localhost:3006/todos/ 
+
+{
+  "id": 10,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO"
+}
+
+### 
+
+//API 4 
+PUT http://localhost:3006/todos/5/ 
+
+{
+  "status": "DONE"
+}
+### 
+
+PUT http://localhost:3006/todos/5/ 
+
+{
+  "priority": "HIGH"
+}
+###
+
+PUT http://localhost:3006/todos/5/ 
+
+{
+  "todo": "Some task"
+}
+###
+
+DELETE http://localhost:3006/todos/1/ 
+###
